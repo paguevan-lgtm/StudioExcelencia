@@ -135,73 +135,80 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center bg-dark overflow-hidden pt-20">
+    <section class="relative min-h-[100svh] flex items-center bg-dark overflow-hidden pt-28 pb-16 lg:pt-20 lg:pb-0">
         <!-- Decoration Glow -->
-        <div class="absolute top-20 left-0 w-96 h-96 bg-vinho/20 rounded-full blur-[100px] -z-0"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-vinho/10 rounded-full blur-[100px] -z-0"></div>
         <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-dourado/10 rounded-full blur-[120px] -z-0"></div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 py-12 lg:py-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 py-4 lg:py-0">
             
             <!-- Content (Left) -->
-            <div class="w-full lg:w-1/2 text-left flex flex-col items-start pt-10 lg:pt-0">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="h-[1px] w-8 bg-dourado"></div>
-                    <span class="text-dourado text-xs md:text-sm uppercase tracking-[0.2em] font-semibold">Barbearia Premium</span>
+            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left pt-6 lg:pt-0">
+                <div class="flex items-center justify-center lg:justify-start gap-3 mb-6 w-full">
+                    <div class="h-[1px] w-8 bg-dourado hidden lg:block"></div>
+                    <span class="text-dourado text-xs md:text-sm uppercase tracking-[0.3em] font-bold">Barbearia Premium</span>
+                    <div class="h-[1px] w-8 bg-dourado hidden lg:block"></div>
                 </div>
                 
-                <!-- Logo Hero (Substituindo o texto para dar mais impacto visual) -->
-                <img src="https://i.imgur.com/ueskLpW.png" alt="Stúdio Excelência Barbearia" class="w-64 md:w-80 lg:w-[400px] mb-6 object-contain drop-shadow-[0_0_20px_rgba(116,1,14,0.3)]">
+                <!-- Logo Hero -->
+                <img src="https://i.imgur.com/ueskLpW.png" alt="Stúdio Excelência Barbearia" class="w-72 sm:w-80 lg:w-[450px] mb-8 object-contain drop-shadow-[0_0_25px_rgba(212,175,55,0.15)]">
                 
                 <h1 class="sr-only">Stúdio Excelência</h1>
                 
-                <p class="text-lg md:text-xl text-mutado font-light mb-8 max-w-lg leading-relaxed border-l-2 border-vinho pl-4">
-                    "Tradição, modernidade e qualidade." <br>
-                    Corte <span class="text-dourado px-2">•</span> Barba <span class="text-dourado px-2">•</span> Trança
-                </p>
+                <div class="mb-10 max-w-lg">
+                    <span class="block font-serif italic text-dourado text-xl md:text-2xl mb-4 leading-relaxed">
+                        "Tradição, modernidade e qualidade."
+                    </span>
+                    <p class="text-texto/90 font-medium tracking-wider uppercase text-sm md:text-base flex items-center justify-center lg:justify-start gap-3">
+                        Corte <span class="text-vinho text-xl">•</span> Barba <span class="text-vinho text-xl">•</span> Trança
+                    </p>
+                </div>
                 
-                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full sm:w-auto">
-                    <a href="#contato" class="w-full sm:w-auto px-8 py-4 bg-vinho hover:bg-white text-texto hover:text-dark transition-all duration-300 font-bold tracking-wider uppercase text-sm rounded-xl shadow-[0_0_20px_rgba(116,1,14,0.4)] text-center">
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full px-4 lg:px-0">
+                    <a href="#contato" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-dourado to-[#b89523] hover:from-white hover:to-white text-dark transition-all duration-300 font-bold tracking-widest uppercase text-sm rounded-full shadow-[0_0_25px_rgba(212,175,55,0.4)] text-center transform hover:scale-105">
                         Agendar Agora
                     </a>
-                    <a href="https://wa.me/5513996731615" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/10 text-texto hover:border-dourado hover:text-dourado transition-all duration-300 font-semibold tracking-wider uppercase text-sm rounded-xl flex items-center justify-center gap-2">
-                        <i class="ph-fill ph-whatsapp text-xl"></i> WhatsApp
+                    <a href="https://wa.me/5513996731615" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-surface/80 backdrop-blur-md border border-white/10 text-texto hover:border-dourado hover:text-dourado transition-all duration-300 font-semibold tracking-widest uppercase text-sm rounded-full flex items-center justify-center gap-2 transform hover:scale-105">
+                        <i class="ph-fill ph-whatsapp text-xl text-[#25D366]"></i> WhatsApp
                     </a>
                 </div>
                 
                 <!-- Trust indicators -->
-                <div class="flex items-center gap-6 mt-12 pt-8 border-t border-white/5 w-full max-w-md">
+                <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-14 pt-8 border-t border-white/5 w-full max-w-md justify-center lg:justify-start">
                     <div class="flex -space-x-3">
-                        <img class="w-10 h-10 rounded-full border-2 border-dark object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
-                        <img class="w-10 h-10 rounded-full border-2 border-dark object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
-                        <img class="w-10 h-10 rounded-full border-2 border-dark object-cover" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
-                        <div class="w-10 h-10 rounded-full border-2 border-dark bg-surface flex items-center justify-center text-xs text-dourado font-bold">+5k</div>
+                        <img class="w-12 h-12 rounded-full border-2 border-dark object-cover shadow-lg" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
+                        <img class="w-12 h-12 rounded-full border-2 border-dark object-cover shadow-lg" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
+                        <img class="w-12 h-12 rounded-full border-2 border-dark object-cover shadow-lg" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
+                        <div class="w-12 h-12 rounded-full border-2 border-dark bg-gradient-to-br from-vinho to-[#4a0008] flex items-center justify-center text-xs text-dourado font-bold shadow-lg">+5k</div>
                     </div>
-                    <div>
-                        <div class="flex text-dourado text-sm">
+                    <div class="text-center sm:text-left">
+                        <div class="flex justify-center sm:justify-start text-dourado text-sm mb-1">
                             <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                         </div>
-                        <p class="text-xs text-mutado mt-1">Clientes Satisfeitos</p>
+                        <p class="text-xs text-mutado uppercase tracking-widest font-medium">Clientes Satisfeitos</p>
                     </div>
                 </div>
             </div>
 
             <!-- Image (Right) -->
-            <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end mt-10 lg:mt-0">
-                <div class="relative w-[90%] sm:w-[80%] lg:w-[90%] aspect-[4/5] max-h-[700px]">
-                    <!-- Main Image with Arch -->
-                    <img src="https://ferrante.com.br/wp-content/uploads/2025/07/cadeira-barbeiro-dia-do-homem-ferrante-2.jpg" alt="Cadeira de Barbearia Premium" class="w-full h-full object-cover rounded-t-[10rem] rounded-b-3xl border border-white/5 shadow-lux grayscale-[10%]" />
-                    
-                    <!-- Decorative border line -->
-                    <div class="absolute -inset-4 rounded-t-[10rem] rounded-b-3xl border border-dourado/20 -z-10 hidden sm:block"></div>
+            <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end mt-16 lg:mt-0 px-2 sm:px-0">
+                <!-- Background Glow -->
+                <div class="absolute inset-0 bg-dourado/10 blur-[60px] rounded-full scale-90 z-0 hidden lg:block"></div>
 
-                    <!-- Floating Card -->
-                    <div class="absolute bottom-10 -left-6 sm:-left-12 bg-surface/90 backdrop-blur-md p-5 rounded-2xl border border-white/10 flex items-center gap-4 shadow-glow animate-bounce" style="animation-duration: 3s;">
-                        <div class="w-14 h-14 bg-vinho rounded-xl flex items-center justify-center text-dourado shadow-lg">
-                            <i class="ph-light ph-scissors text-3xl"></i>
+                <div class="relative w-full max-w-[420px] lg:max-w-none lg:w-[90%] aspect-[4/5] lg:max-h-[700px] z-10">
+                    <!-- Main Image with Dynamic Frame -->
+                    <div class="w-full h-full rounded-[2.5rem] lg:rounded-t-[10rem] lg:rounded-b-3xl p-[2px] bg-gradient-to-b from-dourado/50 via-white/5 to-transparent shadow-2xl">
+                        <img src="https://ferrante.com.br/wp-content/uploads/2025/07/cadeira-barbeiro-dia-do-homem-ferrante-2.jpg" alt="Cadeira de Barbearia Premium" class="w-full h-full object-cover rounded-[2.4rem] lg:rounded-t-[9.8rem] lg:rounded-b-[1.4rem] grayscale-[15%]" />
+                    </div>
+
+                    <!-- Floating Card - Centered on Mobile -->
+                    <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:-left-12 lg:bottom-10 bg-surface/95 backdrop-blur-xl p-4 sm:p-5 rounded-2xl border border-dourado/20 flex items-center justify-center gap-4 shadow-[0_15px_40px_rgba(0,0,0,0.6)] animate-bounce w-[85%] sm:w-auto" style="animation-duration: 4s;">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-vinho to-dark rounded-xl flex items-center justify-center text-dourado shadow-inner border border-white/5 shrink-0">
+                            <i class="ph-light ph-scissors text-2xl sm:text-3xl"></i>
                         </div>
                         <div>
-                            <p class="text-texto font-bold font-serif text-lg">Mestres</p>
-                            <p class="text-mutado text-xs uppercase tracking-wider">da Barbearia</p>
+                            <p class="text-texto font-bold font-serif text-base sm:text-lg">Mestres</p>
+                            <p class="text-dourado text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold">da Barbearia</p>
                         </div>
                     </div>
                 </div>
