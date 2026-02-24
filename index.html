@@ -45,6 +45,7 @@
         body {
             background-color: #0a0a0a;
             color: #f8f8f2;
+            overflow-x: hidden; /* Previne scroll horizontal em qualquer tela */
         }
         .text-gradient {
             background: linear-gradient(135deg, #D4AF37 0%, #fef08a 50%, #D4AF37 100%);
@@ -123,7 +124,7 @@
                 <a href="#servicos" class="text-texto hover:text-dourado block px-3 py-3 text-base font-medium border-b border-white/5">Serviços</a>
                 <a href="#galeria" class="text-texto hover:text-dourado block px-3 py-3 text-base font-medium border-b border-white/5">Galeria</a>
                 <a href="#contato" class="text-texto hover:text-dourado block px-3 py-3 text-base font-medium mb-4">Contato</a>
-                <a href="https://wa.me/5513996731615" target="_blank" class="bg-dourado text-dark block text-center px-3 py-3 rounded-full font-bold shadow-glow mb-4">Agendar Agora</a>
+                <a href="#hero-agendamento" class="bg-dourado text-dark block text-center px-3 py-3 rounded-full font-bold shadow-glow mb-4">Agendar Agora</a>
                 
                 <!-- Menção Grupo CBL Mobile -->
                 <div class="px-3 py-4 bg-dark/50 rounded-xl border border-white/5 flex flex-col items-center justify-center text-center mt-2">
@@ -134,83 +135,88 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-[100svh] flex items-center bg-dark overflow-hidden pt-28 pb-16 lg:pt-20 lg:pb-0">
-        <!-- Decoration Glow -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-vinho/10 rounded-full blur-[100px] -z-0"></div>
-        <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-dourado/10 rounded-full blur-[120px] -z-0"></div>
+    <!-- Hero Section: Focado 100% em Leads e Mobile First -->
+    <section class="relative min-h-[100svh] flex items-center bg-dark overflow-hidden pt-24 pb-12">
+        <!-- Background Imersivo -->
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img src="https://ferrante.com.br/wp-content/uploads/2025/07/cadeira-barbeiro-dia-do-homem-ferrante-2.jpg" alt="Interior Barbearia" class="w-full h-full object-cover opacity-40 mix-blend-luminosity">
+            <!-- Gradientes para garantir leitura perfeita -->
+            <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/80 to-dark/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+        </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 py-4 lg:py-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center mt-8">
             
-            <!-- Content (Left) -->
-            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left pt-6 lg:pt-0">
-                <div class="flex items-center justify-center lg:justify-start gap-3 mb-6 w-full">
-                    <div class="h-[1px] w-8 bg-dourado hidden lg:block"></div>
-                    <span class="text-dourado text-xs md:text-sm uppercase tracking-[0.3em] font-bold">Barbearia Premium</span>
-                    <div class="h-[1px] w-8 bg-dourado hidden lg:block"></div>
+            <!-- Esquerda: Proposta de Valor e Autoridade -->
+            <div class="flex flex-col items-center lg:items-start text-center lg:text-left">
+                
+                <!-- Selo de Autoridade -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-dourado/30 bg-dourado/10 backdrop-blur-md mb-6 shadow-glow animate-fade-in-up">
+                    <i class="ph-fill ph-star text-dourado text-sm"></i>
+                    <span class="text-dourado text-[10px] sm:text-xs font-bold uppercase tracking-widest">A Melhor Barbearia de São Vicente</span>
                 </div>
                 
-                <!-- Logo Hero -->
-                <img src="https://i.imgur.com/ueskLpW.png" alt="Stúdio Excelência Barbearia" class="w-72 sm:w-80 lg:w-[450px] mb-8 object-contain drop-shadow-[0_0_25px_rgba(212,175,55,0.15)]">
-                
+                <!-- Logo Grande -->
+                <img src="https://i.imgur.com/ueskLpW.png" alt="Stúdio Excelência Barbearia" class="w-64 sm:w-80 lg:w-[420px] mb-6 object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.2)]">
                 <h1 class="sr-only">Stúdio Excelência</h1>
                 
-                <div class="mb-10 max-w-lg">
-                    <span class="block font-serif italic text-dourado text-xl md:text-2xl mb-4 leading-relaxed">
-                        "Tradição, modernidade e qualidade."
-                    </span>
-                    <p class="text-texto/90 font-medium tracking-wider uppercase text-sm md:text-base flex items-center justify-center lg:justify-start gap-3">
-                        Corte <span class="text-vinho text-xl">•</span> Barba <span class="text-vinho text-xl">•</span> Trança
-                    </p>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full px-4 lg:px-0">
-                    <a href="#contato" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-dourado to-[#b89523] hover:from-white hover:to-white text-dark transition-all duration-300 font-bold tracking-widest uppercase text-sm rounded-full shadow-[0_0_25px_rgba(212,175,55,0.4)] text-center transform hover:scale-105">
-                        Agendar Agora
-                    </a>
-                    <a href="https://wa.me/5513996731615" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-surface/80 backdrop-blur-md border border-white/10 text-texto hover:border-dourado hover:text-dourado transition-all duration-300 font-semibold tracking-widest uppercase text-sm rounded-full flex items-center justify-center gap-2 transform hover:scale-105">
-                        <i class="ph-fill ph-whatsapp text-xl text-[#25D366]"></i> WhatsApp
-                    </a>
-                </div>
-                
-                <!-- Trust indicators -->
-                <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-14 pt-8 border-t border-white/5 w-full max-w-md justify-center lg:justify-start">
-                    <div class="flex -space-x-3">
-                        <img class="w-12 h-12 rounded-full border-2 border-dark object-cover shadow-lg" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
-                        <img class="w-12 h-12 rounded-full border-2 border-dark object-cover shadow-lg" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
-                        <img class="w-12 h-12 rounded-full border-2 border-dark object-cover shadow-lg" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cliente">
-                        <div class="w-12 h-12 rounded-full border-2 border-dark bg-gradient-to-br from-vinho to-[#4a0008] flex items-center justify-center text-xs text-dourado font-bold shadow-lg">+5k</div>
+                <!-- Texto Persuasivo -->
+                <p class="text-texto/90 text-base sm:text-lg mb-8 max-w-lg font-light leading-relaxed">
+                    Mais do que um simples corte, uma <strong class="text-dourado font-medium">experiência premium</strong>. Eleve seu visual e sua confiança com nossos mestres especialistas.
+                </p>
+
+                <!-- Prova Social Integrada (Mobile otimizado) -->
+                <div class="flex items-center gap-4 bg-surface/60 backdrop-blur-md px-5 sm:px-6 py-3 sm:py-4 rounded-2xl border border-white/10 shadow-xl w-full sm:w-auto justify-center sm:justify-start">
+                    <div class="flex -space-x-3 shrink-0">
+                        <img class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&w=100&q=80" alt="Cliente">
+                        <img class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=100&q=80" alt="Cliente">
+                        <img class="w-10 h-10 rounded-full border-2 border-surface object-cover" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&w=100&q=80" alt="Cliente">
                     </div>
-                    <div class="text-center sm:text-left">
-                        <div class="flex justify-center sm:justify-start text-dourado text-sm mb-1">
+                    <div class="text-left">
+                        <div class="flex text-dourado text-xs sm:text-sm mb-0.5">
                             <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
                         </div>
-                        <p class="text-xs text-mutado uppercase tracking-widest font-medium">Clientes Satisfeitos</p>
+                        <p class="text-[10px] sm:text-xs text-mutado font-medium uppercase tracking-wider">+5.000 Homens Satisfeitos</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Image (Right) -->
-            <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end mt-16 lg:mt-0 px-2 sm:px-0">
-                <!-- Background Glow -->
-                <div class="absolute inset-0 bg-dourado/10 blur-[60px] rounded-full scale-90 z-0 hidden lg:block"></div>
-
-                <div class="relative w-full max-w-[420px] lg:max-w-none lg:w-[90%] aspect-[4/5] lg:max-h-[700px] z-10">
-                    <!-- Main Image with Dynamic Frame -->
-                    <div class="w-full h-full rounded-[2.5rem] lg:rounded-t-[10rem] lg:rounded-b-3xl p-[2px] bg-gradient-to-b from-dourado/50 via-white/5 to-transparent shadow-2xl">
-                        <img src="https://ferrante.com.br/wp-content/uploads/2025/07/cadeira-barbeiro-dia-do-homem-ferrante-2.jpg" alt="Cadeira de Barbearia Premium" class="w-full h-full object-cover rounded-[2.4rem] lg:rounded-t-[9.8rem] lg:rounded-b-[1.4rem] grayscale-[15%]" />
+            <!-- Direita: Máquina de Leads (Formulário Rápido de Agendamento) -->
+            <div class="w-full max-w-md mx-auto lg:ml-auto relative" id="hero-agendamento">
+                <!-- Brilho no fundo do form -->
+                <div class="absolute inset-0 bg-dourado/10 blur-[50px] rounded-full z-0"></div>
+                
+                <div class="relative z-10 bg-surface/80 backdrop-blur-xl p-6 sm:p-8 rounded-3xl border border-dourado/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                    
+                    <div class="text-center mb-6">
+                        <div class="w-12 h-12 bg-vinho rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg border border-white/5">
+                            <i class="ph-light ph-calendar-check text-2xl text-dourado"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl text-texto mb-1">Agendamento Rápido</h3>
+                        <p class="text-xs text-mutado">Garanta seu horário em menos de 1 minuto.</p>
                     </div>
-
-                    <!-- Floating Card - Centered on Mobile -->
-                    <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 lg:translate-x-0 lg:-left-12 lg:bottom-10 bg-surface/95 backdrop-blur-xl p-4 sm:p-5 rounded-2xl border border-dourado/20 flex items-center justify-center gap-4 shadow-[0_15px_40px_rgba(0,0,0,0.6)] animate-bounce w-[85%] sm:w-auto" style="animation-duration: 4s;">
-                        <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-vinho to-dark rounded-xl flex items-center justify-center text-dourado shadow-inner border border-white/5 shrink-0">
-                            <i class="ph-light ph-scissors text-2xl sm:text-3xl"></i>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <input type="text" id="hero-nome" placeholder="Como podemos te chamar?" class="w-full bg-dark/70 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-texto focus:border-dourado focus:ring-1 focus:ring-dourado outline-none transition-all placeholder-white/30">
                         </div>
                         <div>
-                            <p class="text-texto font-bold font-serif text-base sm:text-lg">Mestres</p>
-                            <p class="text-dourado text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold">da Barbearia</p>
+                            <select id="hero-servico" class="w-full bg-dark/70 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white/70 focus:text-texto focus:border-dourado focus:ring-1 focus:ring-dourado outline-none transition-all appearance-none">
+                                <option value="">Qual serviço você procura?</option>
+                                <option value="Corte Moderno ou Clássico">Corte Masculino</option>
+                                <option value="Barba Premium (Toalha Quente)">Barba Premium</option>
+                                <option value="Combo: Corte + Barba">Combo: Corte + Barba</option>
+                                <option value="Tranças Nagô/Box Braids">Tranças Afros</option>
+                                <option value="Pacote Dia do Noivo">Dia do Noivo</option>
+                            </select>
                         </div>
+                        <button onclick="enviarWhatsAppHero()" class="w-full py-4 mt-2 bg-gradient-to-r from-dourado to-[#b89523] hover:from-white hover:to-white text-dark font-bold uppercase tracking-widest text-sm rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-glow transform hover:scale-[1.02]">
+                            <i class="ph-bold ph-whatsapp text-xl"></i> Agendar via WhatsApp
+                        </button>
                     </div>
+                    <p class="text-center text-[10px] text-mutado mt-4 font-light">
+                        <i class="ph-fill ph-lock-key inline-block mr-1"></i> Seus dados estão seguros e não enviamos spam.
+                    </p>
                 </div>
             </div>
 
@@ -218,7 +224,7 @@
     </section>
 
     <!-- Sobre Nós Section -->
-    <section id="sobre" class="py-24 bg-dark relative">
+    <section id="sobre" class="py-24 bg-dark relative border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <!-- Image -->
@@ -682,6 +688,9 @@
 
     <!-- Scripts -->
     <script>
+        // Previne qualquer scroll horizontal globalmente
+        document.body.style.overflowX = 'hidden';
+
         // Toggle Mobile Menu
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -707,7 +716,27 @@
             }
         });
 
-        // Função para enviar os dados do formulário direto para o WhatsApp
+        // Função para o Formulário Rápido do Hero
+        function enviarWhatsAppHero() {
+            const nome = document.getElementById('hero-nome').value;
+            const servico = document.getElementById('hero-servico').value;
+
+            if(!nome) {
+                alert("Por favor, digite seu nome para iniciar o agendamento.");
+                return;
+            }
+
+            let texto = `Olá! Meu nome é *${nome}*.\n`;
+            if(servico) texto += `Tenho interesse no serviço de: *${servico}* e gostaria de agendar um horário.\n`;
+            else texto += `Gostaria de agendar um horário.\n`;
+
+            const textoCodificado = encodeURIComponent(texto);
+            const url = `https://wa.me/5513996731615?text=${textoCodificado}`;
+            
+            window.open(url, '_blank');
+        }
+
+        // Função para o Formulário Completo do Footer
         function enviarWhatsApp() {
             const nome = document.getElementById('nome').value;
             const telefone = document.getElementById('telefone').value;
